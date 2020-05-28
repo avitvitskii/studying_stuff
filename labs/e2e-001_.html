@@ -1,16 +1,34 @@
-<html>
- <head>
-  <meta charset="utf-8" />
-  <title>HTML5</title>
-  <!--[if IE]>
-   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <style>
-   article, aside, details, figcaption, figure, footer,header,
-   hgroup, menu, nav, section { display: block; }
-  </style>
- </head>
- <body>
-  <p>Привет, мир</p>
- </body>
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <form action="/" id="frm">
+    <label for="inp">Некий текст: </label><br>
+    <input type="text" id="inp" name="lname"><br><br>
+  </form>
+  <button id="bt">Кнопка</button>
+  <script>
+    document.getElementById("frm").addEventListener("submit", function(event){
+      event.preventDefault();
+      getHex();
+    });
+    document.getElementById("bt").addEventListener("click", getHex);
+
+    async function getHex() {
+      const msgUint8 = new TextEncoder().encode(document.getElementById("inp").value);
+      const hashBuffer = await crypto.subtle.digest('SHA-1', msgUint8);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      document.getElementById("inp").value = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+  </script>
+</body>
+
 </html>
