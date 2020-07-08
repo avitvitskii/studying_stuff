@@ -10,4 +10,5 @@ Email: <antony.vitvitskiy@gmail.com>
 * func_002: <https://kodaktor.ru/func_18bde>
 * func_003: <https://kodaktor.ru/func_f138e>
 * func_004: <https://kodaktor.ru/func_ec666>
+* func_008: <https://kodaktor.ru/func_22081>
 
