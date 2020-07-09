@@ -14,3 +14,4 @@ Email: <antony.vitvitskiy@gmail.com>
 * func_007: <https://kodaktor.ru/func_52f4f>
 * func_009: <https://kodaktor.ru/func_22081>
 * async_tasks: <https://kodaktor.ru/async_tasks_c7708>
+* evnt_002: <https://kodaktor.ru/custom_9f5ce>
